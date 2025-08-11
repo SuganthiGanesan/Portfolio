@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SUGANTHI GANESAN | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body class="dark-mode">
+
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
+
+  <!-- Navigation + Dark Mode Toggle -->
+  <div class="top-bar">
+    <nav class="top-nav">
+      <ul class="nav-menu">
+        <li><a href="#profile" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="dark-toggle" class="dark-toggle-btn">🌓</button>
+  </div>
+
+  <!-- Preloader -->
+  <div id="preloader"><h1>SUGANTHI GANESAN</h1></div>
+
+  <!-- Hero Section -->
+  <header class="slide-up">
+    <h1>SUGANTHI GANESAN</h1>
+    <p class="summary">Full Stack Web Developer | AI/ML Enthusiast | Data Scientist</p>
+    <a href="resume.pdf" class="resume-btn" download>Download Resume</a>
+  </header>
+
+  <!-- About Me -->
+  <section id="profile" class="slide-up">
+    <h2>ABOUT ME</h2>
+    <p>Hi, I'm Suganthi Ganesan — a passionate and driven AI & Machine Learning enthusiast with a strong foundation in Python and full-stack web development. I have hands-on experience building intelligent systems, working with real-time data, and creating practical AI solutions for both academic and industry use cases.</p>
+    <p>I enjoy turning complex problems into elegant, data-driven solutions and developing responsive web applications with clean, maintainable code. I'm constantly sharpening my skills through internships, certifications, and real-world projects.</p>
+    <p>I'm always eager to learn, collaborate, and contribute to meaningful tech projects that make a real-world impact.</p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="slide-up">
+    <h2>PROJECTS</h2>
+    <div class="project-grid">
+      <!-- Project 1 -->
+      <div class="project-card" data-repo="https://github.com/SuganthiGanesan/emotion-detector">
+        <img src="images/project1.png" alt="Project 1" />
+        <div class="project-info">
+          <h3>Real time Emotion Detector</h3>
+          <h4>Tech Used: <b>HTML, CSS, JavaScript, TensorFlow</b></h4>
+          <p>• Designed an intuitive front-end using HTML, CSS, and JavaScript to display detected emotions in real time</p>
+          <p>• Integrated pre-trained TensorFlow.js models to recognize emotions like happy, sad, angry, etc.</p>
+          <p>• Displayed live predictions along with confidence scores for each detected emotion</p>
+        </div>
+      </div>
+      <!-- Project 2 -->
+      <div class="project-card" data-repo="https://github.com/SuganthiGanesan/object-detection">
+        <img src="images/project2.png" alt="Project 2" />
+        <div class="project-info">
+          <h3>Real Time Object Detection</h3>
+          <h4>Tech Used: <b>HTML, CSS, JavaScript, TensorFlow, COCO-SSD</b></h4>
+          <p>• Detected and classified multiple objects directly in the browser.</p>
+          <p>• Displayed live webcam video with bounding boxes, labels, and confidence scores.</p>
+        </div>
+      </div>
+      <!-- Project 3 -->
+      <div class="project-card" data-repo="https://github.com/SuganthiGanesan/house-price-estimator">
+        <img src="images/project3.jpg" alt="Project 3" />
+        <div class="project-info">
+          <h3>House Price Estimator</h3>
+          <h4>Tech Used: <b>Python, Scikit-learn, Streamlit, NumPy</b></h4>
+          <p>• Built an app to predict house prices based on key features.</p>
+          <p>• Used Linear Regression and dynamic input sliders.</p>
+        </div>
+      </div>
+      <!-- Project 4 -->
+      <div class="project-card" data-repo="https://github.com/SuganthiGanesan/credit-card-fraud-detection">
+        <img src="images/project4.jpg" alt="Project 4" />
+        <div class="project-info">
+          <h3>Credit Card Fraud Detection</h3>
+          <h4>Tech Used: <b>Python, Pandas, Scikit-learn</b></h4>
+          <p>• Built a classifier to detect fraudulent credit card transactions using real-world data.</p>
+          <p>• Applied Logistic Regression and evaluated model performance using precision, recall, F1-score, and confusion matrix.</p>
+
+        </div>
+      </div>
+      <!-- Project 5 -->
+      <div class="project-card" data-repo="https://github.com/SuganthiGanesan/Learnopedia">
+        <img src="images/project5.jpeg" alt="Project 5" />
+        <div class="project-info">
+          <h3>Learnopedia</h3>
+          <h4>Tech Used: <b> HTML, CSS, JavaScript </b></h4>
+          <p>• Developed a multi-page educational web platform ("Learnopedia") using HTML, featuring tools like quizzes, translators, vocabulary builders, and general knowledge modules.</p>
+          <p>• Implemented modular and semantic page structures, enabling ease of maintenance, scalability, and consistency across interactive learning interfaces.
+</p>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="timeline slide-up">
+    <h2>EXPERIENCE</h2>
+    <div class="timeline-item">
+      <h3>AI & ML Intern – NoviTech R&D Private Ltd</h3>
+      <p>March 2025 – April 2025</p>
+      <ul>
+        <li>Built machine learning models using real-time datasets.</li>
+        <li>Contributed to applied AI research projects.</li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <h3>Full Stack Web Developer Intern – Zealyen Infotech</h3>
+      <p>Jan 2025 – Feb 2025</p>
+      <ul>
+        <li>Developed full-stack apps with HTML, CSS, JavaScript.</li>
+        <li>Worked on real-world deployment-ready projects.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="slide-up">
+    <h2>SKILLS</h2>
+    <ul class="skills-list">
+      <li>Artificial Intelligence</li>
+      <li>Machine Learning</li>
+      <li>Data Science</li>
+      <li>Python</li>
+      <li>Java</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+  </section>
+
+  <!-- Certifications -->
+
+  <section id="certifications" class="timeline slide-up">
+    <h2>CERTIFICATIONS</h2>
+    <div class="timeline-item">
+      <p><strong>Career Essentials in Generative AI</strong> – Microsoft & LinkedIn</p>
+      <button class="view-cert-btn" data-cert="certificates/cert1.pdf">View Certificate</button>
+    </div>
+    <div class="timeline-item">
+      <p><strong>Mastering Generative AI and ChatGPT</strong> – Geeks for Geeks</p>
+      <button class="view-cert-btn" data-cert="certificates/cert2.pdf">View Certificate</button>
+    </div>
+<div class="timeline-item">
+      <p><strong>Python for Data Science</strong> – IBM</p>
+      <button class="view-cert-btn" data-cert="certificates/cert4.pdf">View Certificate</button>
+    </div>
+
+    <div class="timeline-item">
+      <p><strong>Introduction to Artificial Intelligence & Machine Learning</strong> – Infosys</p>
+      <button class="view-cert-btn" data-cert="certificates/cert3.pdf">View Certificate</button>
+    </div>
+    
+    <div class="timeline-item">
+      <p><strong>Introduction to Data Science & NLP</strong> – Infosys</p>
+      <button class="view-cert-btn" data-cert="certificates/cert5.pdf">View Certificate</button>
+      <button class="view-cert-btn" data-cert="certificates/cert6.pdf">View Certificate</button>
+
+    </div>
+
+  </section>
+
+  
+  <section id="contact" class="slide-up">
+    <h2>CONTACT DETAILS</h2>
+    <p>Email: <a href="mailto:suganthig2003@gmail.com">suganthig2003@gmail.com</a></p>
+    <p>Phone: 9500036500</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/suganthi-ganesan-42b6071b5/">linkedin.com/in/suganthi-ganesan</a></p>
+    <p>GitHub: <a href="https://github.com/SuganthiGanesan">github.com/SuganthiGanesan</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 SUGANTHI GANESAN. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+

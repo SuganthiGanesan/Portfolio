@@ -1,0 +1,303 @@
+:root {
+  --text-color: #fff;
+  --accent-color: #0077ff;
+  --card-bg: rgba(255, 255, 255, 0.1);
+  --card-hover: rgba(255, 255, 255, 0.2);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  --text-color: #f0f0f0;
+  --accent-color: #4da6ff;
+  --card-bg: rgba(0, 0, 0, 0.3);
+  --card-hover: rgba(0, 0, 0, 0.4);
+  background: linear-gradient(-45deg, #121212, #1a1a2e, #16213e, #0f3460);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(-45deg, #0077ff, #00c6ff, #ff6ec4, #ffc93c);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: var(--text-color);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  transition: background 0.5s ease;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Particle Background */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+/* Top Navigation Bar */
+.top-bar {
+  position: fixed;
+  top: 10px;
+  right: 70px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 1000;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.nav-link:hover {
+  color: var(--accent-color);
+}
+
+/* Dark Mode Toggle Button */
+.dark-toggle-btn {
+  position: static;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.dark-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+/* Header Section */
+header {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.summary {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.resume-btn {
+  display: inline-block;
+  padding: 0.8rem 1.2rem;
+  background-color: white;
+  color: #0077ff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.resume-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* Section Base Style */
+section {
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+section.slide-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+/* Contact Links */
+a {
+  color: var(--text-color);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* Project Grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease, background 0.3s ease;
+  color: white;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  background: var(--card-hover);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.project-info {
+  padding: 1rem;
+}
+
+/* Timeline (Experience & Certifications) */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.timeline-item {
+  background: var(--card-bg);
+  padding: 1rem;
+  border-left: 4px solid var(--accent-color);
+  border-radius: 5px;
+}
+
+/* Skills Grid */
+.skills-list {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  text-align: center;
+}
+
+.skills-list li {
+  background: var(--card-bg);
+  padding: 0.8rem;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.skills-list li:hover {
+  transform: translateY(-5px);
+}
+
+/* Certificate Buttons */
+.view-cert-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid white;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-cert-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+body.dark-mode .view-cert-btn {
+  border-color: var(--accent-color);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-end;
+    right: 10px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 2rem 1rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
