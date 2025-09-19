@@ -5,7 +5,6 @@
   --card-hover: rgba(255, 255, 255, 0.2);
 }
 
-/* Dark Mode Styles */
 body.dark-mode {
   --text-color: #f0f0f0;
   --accent-color: #4da6ff;
@@ -43,21 +42,40 @@ body {
 }
 
 /* Preloader */
+/* Preloader style */
 #preloader {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: #000;
-  color: white;
+  background-color: #111; /* background color */
   display: flex;
-  align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  align-items: center;
   z-index: 9999;
-  transition: opacity 0.5s ease;
 }
+
+/* Animated Name */
+#preloader-name {
+  font-size: 5rem; /* Keep the text big */
+  font-weight: bold;
+  color: #fff; /* fallback color */
+  background: linear-gradient(270deg, #ff4d4d, #4d79ff, #ff4dff, #4dff88);
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 5s ease infinite;
+}
+
+/* Gradient color animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
 
 /* Top Navigation Bar */
 .top-bar {
@@ -139,7 +157,7 @@ header {
   background-color: #e0e0e0;
 }
 
-/* Section Base Style */
+/* Sections */
 section {
   padding: 3rem 2rem;
   max-width: 1000px;
@@ -171,6 +189,129 @@ a:hover {
   color: var(--accent-color);
 }
 
+/* Timeline (Education, Experience, Certifications) */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.timeline-item {
+  background: var(--card-bg);
+  padding: 1rem;
+  border-left: 4px solid var(--accent-color);
+  border-radius: 5px;
+}
+
+.skills-section {
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.skills-section .section-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0, 198, 255, 0.6);
+}
+
+.skill-icon {
+  width: 60px;      /* uniform width */
+  height: 60px;     /* uniform height */
+  object-fit: contain; /* maintain aspect ratio */
+  margin-bottom: 8px; /* spacing between icon and text */
+  display: block;
+}
+
+
+.skill-item p {
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skill-icon {
+    width: 50px;
+    height: 50px;
+  }
+  .skill-item p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-row {
+    gap: 15px;
+  }
+  .skill-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .skill-item p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Project Tabs */
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: transparent;
+  border: 2px solid var(--accent-color);
+  color: var(--text-color);
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+  background: var(--accent-color);
+  color: white;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
 /* Project Grid */
 .project-grid {
   display: grid;
@@ -195,49 +336,41 @@ a:hover {
 
 .project-card img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height:200px;
+  object-fit: contain;
+  background: #000;
   display: block;
 }
 
 .project-info {
   padding: 1rem;
 }
-
-/* Timeline (Experience & Certifications) */
-.timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+/* Project Card Text Formatting */
+.project-card h3 {
+  font-size: 1.2rem;     /* Same title size */
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #fff;
 }
 
-.timeline-item {
-  background: var(--card-bg);
-  padding: 1rem;
-  border-left: 4px solid var(--accent-color);
-  border-radius: 5px;
+.project-card h4 {
+  font-size: 0.95rem;    /* Same tech-used size */
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #ffd369;
 }
 
-/* Skills Grid */
-.skills-list {
-  list-style: none;
-  padding-left: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 1rem;
-  text-align: center;
+.project-card h4 b {
+  font-weight: 600;      /* Keep bold consistent */
 }
 
-.skills-list li {
-  background: var(--card-bg);
-  padding: 0.8rem;
-  border-radius: 5px;
-  transition: transform 0.3s ease;
+.project-card p {
+  font-size: 0.9rem;     /* Same description size */
+  line-height: 1.5;
+  margin-bottom: 6px;
+  color: #ddd;
 }
 
-.skills-list li:hover {
-  transform: translateY(-5px);
-}
 
 /* Certificate Buttons */
 .view-cert-btn {
@@ -268,7 +401,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Responsive Layout */
+/* Responsive */
 @media (max-width: 768px) {
   .top-bar {
     flex-direction: column;
