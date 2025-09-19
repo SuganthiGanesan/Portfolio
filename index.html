@@ -30,24 +30,25 @@
   </div>
 
   <!-- Preloader -->
-  <div id="preloader"><h1>SUGANTHI GANESAN</h1></div>
+<div id="preloader">
+  <h1 id="preloader-name">SUGANTHI GANESAN</h1>
+</div>
 
   <!-- Hero Section -->
   <header class="slide-up">
     <h1>SUGANTHI GANESAN</h1>
-    <p class="summary">Full Stack Web Developer | AI/ML Enthusiast | Data Scientist</p>
+    <p class="summary">Full Stack Web Developer | AI/ML Enthusiast | Data Analyst</p>
     <a href="resume.pdf" class="resume-btn" download>Download Resume</a>
   </header>
 
   <!-- About Me -->
   <section id="profile" class="slide-up">
     <h2>ABOUT ME</h2>
-  <p> I'm Suganthi Ganesan, an AI & Machine Learning enthusiast and full-stack developer proficient in Python and Java. I specialize in building intelligent systems and robust web applications that transform complex problems into elegant, data-driven solutions. I enjoy the entire process, from designing responsive front-ends with clean, maintainable code to implementing powerful backend logic. <p>
+    <p> I'm Suganthi Ganesan, an AI & Machine Learning enthusiast and full-stack developer proficient in Python and Java. I specialize in building intelligent systems and robust web applications that transform complex problems into elegant, data-driven solutions. I enjoy the entire process, from designing responsive front-ends with clean, maintainable code to implementing powerful backend logic. <p>
 <p> Driven by a passion for impactful technology, I continuously sharpen my skills through internships, certifications, and real-world projects. I am always eager to learn, collaborate, and contribute to meaningful tech projects that make a tangible, real-world difference. <p>
 
   </section>
 <!-- Education -->
-  </section>
 <!-- Education -->
 <section id="education" class="timeline slide-up">
   <h2>EDUCATION</h2>
@@ -93,84 +94,210 @@
       </ul>
     </div>
   </section>
-<!-- Projects -->
+ <!-- Projects with Tabs -->
   <section id="projects" class="slide-up">
     <h2>PROJECTS</h2>
-    <div class="project-grid">
-      <!-- Project 1 -->
-      <div class="project-card" data-repo=" https://github.com/SuganthiGanesan/Emotion-detection">
-        <img src="images/project1.png" alt="Project 1" />
-        <div class="project-info">
-          <h3>Real time Emotion Detector</h3>
-          <h4>Tech Used: <b> Python, OpenCV, facial_emotion_recognition, Deep Learning (pre-trained models), Webcam Input</b></h4>
-          <p>• Developed a real-time facial emotion recognition system using Python and OpenCV, integrated with the facial_emotion_recognition library for emotion classification on webcam input.</p>
-          <p>• Utilized pre-trained deep learning models to detect facial expressions (e.g., happy, sad, angry) and overlay predictions directly on live video frames with bounding boxes and labels. </p>
-  
+
+    <!-- Tab Buttons -->
+    <div class="tab-buttons">
+      <button class="tab-btn active" data-tab="ai-ml">AI / ML Projects</button>
+      <button class="tab-btn" data-tab="web">Web Projects</button>
+      <button class="tab-btn" data-tab="data-analytics">Data Analytics</button>
+
+    </div>
+
+    <!-- AI / ML Projects -->
+    <div class="tab-content active" id="ai-ml">
+      <div class="project-grid">
+        <div class="project-card" data-repo=" https://github.com/SuganthiGanesan/Drowsiness">
+          <img src="images/project1.jpeg" alt=" Drowsiness Detection System" />
+          <div class="project-info">
+           <h3> Drowsiness Detection System </h3>
+          <h4>Tech Used: <b> Python, OpenCV, Dlib, Imutils, SciPy, Winsound </b></h4>
+          <p>• Built a real-time drowsiness detection system using facial landmarks and the Eye Aspect Ratio (EAR) method to monitor eye closure and trigger alerts for driver safety. </p>
+          <p>• Integrated live webcam input with continuous frame analysis to ensure accurate and efficient detection. </p>
+
+          </div>
         </div>
+
+        <!-- Project 2 -->
+    <div class="project-card" data-repo="https://github.com/SuganthiGanesan/Object-detection">
+      <img src="images/project2.png" alt="Object Detection" />
+      <div class="project-info">
+        <h3>Real Time Object Detection</h3>
+        <h4>Tech Used: <b>Python, OpenCV, NumPy, Imutils, Caffe, MobileNet-SSD</b></h4>
+        <p>•Built a real-time detection system using OpenCV and a pre-trained MobileNet-SSD to identify multiple objects (including people) via live webcam input. </p>
+        <p>•Integrated OpenCV DNN with Caffe for efficient frame-by-frame inference, providing bounding boxes and labels for visual feedback.</p>
+
       </div>
-      <!-- Project 2 -->
-      <div class="project-card" data-repo=" https://github.com/SuganthiGanesan/Object-detection">
-        <img src="images/project2.png" alt="Project 2" />
-        <div class="project-info">
-          <h3>Real Time Object Detection</h3>
-          <h4>Tech Used: <b> Python, OpenCV, NumPy, Imutils, Caffe, MobileNet-SSD </b></h4>
-          <p>• Built a real-time object detection system using OpenCV and a pre-trained MobileNet-SSD model to identify and classify multiple objects, including people, with live webcam input. </p>
-          <p>• Integrated deep learning inference using OpenCV’s DNN module and Caffe framework, achieving efficient frame-by-frame processing with visual feedback via bounding boxes and labels.</p>
-        </div>
-      </div>
-      <!-- Project 3 -->
-      <div class="project-card" data-repo=" https://github.com/SuganthiGanesan/House-price-prediction">
-        <img src="images/project3.jpg" alt="Project 3" />
-        <div class="project-info">
-          <h3>House Price Estimator</h3>
-          <h4>Tech Used: <b>Python, Scikit-learn, Streamlit, NumPy</b></h4>
-          <p>• Built an app to predict house prices based on key features.</p>
-          <p>• Used Linear Regression and dynamic input sliders.</p>
-        </div>
-      </div>
-      <!-- Project 4 -->
-      <div class="project-card" data-repo=" https://github.com/SuganthiGanesan/credit-card-fraud-detection">
-        <img src="images/project4.jpg" alt="Project 4" />
-        <div class="project-info">
-          <h3>Credit Card Fraud Detection</h3>
+    </div>
+
+        <div class="project-card" data-repo="https://github.com/SuganthiGanesan/credit-card-fraud-detection">
+          <img src="images/project4.jpg" alt="Fraud Detection" />
+          <div class="project-info">
+            <h3>Credit Card Fraud Detection</h3>
           <h4>Tech Used: <b>Python, Pandas, Scikit-learn</b></h4>
           <p>• Built a classifier to detect fraudulent credit card transactions using real-world data.</p>
           <p>• Applied Logistic Regression and evaluated model performance using precision, recall, F1-score, and confusion matrix.</p>
 
+          </div>
         </div>
       </div>
-      <!-- Project 5 -->
-      <div class="project-card" data-repo="https://github.com/SuganthiGanesan/Learnopedia">
-        <img src="images/project5.jpeg" alt="Project 5" />
-        <div class="project-info">
-          <h3>Learnopedia</h3>
-          <h4>Tech Used: <b> HTML, CSS, JavaScript </b></h4>
-          <p>• Developed a multi-page educational web platform ("Learnopedia") using HTML, featuring tools like quizzes, translators, vocabulary builders, and general knowledge modules.</p>
-          <p>• Implemented modular and semantic page structures, enabling ease of maintenance, scalability, and consistency across interactive learning interfaces.
-</p>
-
-        </div>
-      </div>
-
     </div>
-  </section>
+    <div id="data-analytics" class="tab-content">
+  <div class="project-grid">
+    
+    <!-- Example Project Card -->
+    <div class="project-card" data-repo="https://github.com/SuganthiGanesan/Credit-card_Data-Analytics">
+      <img src="images/project4.jpg" alt="Credit Fraud Detection">
+      <div class="project-info">
+        <h3>Credit Card Fraud Detection</h3>
+          <h4>Tech Used: <b> Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, Imbalanced-learn (SMOTE)  </b></h4>
+          <p>• Performed exploratory data analysis (EDA) and visualizations to understand patterns in credit card transactions and detect fraudulent activities.</p>
+          <p>• Built and evaluated a machine learning model to identify fraud in highly imbalanced datasets.
+ </p>
 
+      </div>
+    </div>
+
+    <div class="project-card" data-repo="https://github.com/SuganthiGanesan/Financial-Dashboard">
+      <img src="images/project7.jpg" alt="Financial Market Dashboard">
+      <div class="project-info">
+        <h3>Financial Market Dashboard</h3>
+        <h4>Tech Used:<b>HTML, CSS, JavaScript, Chart.js, REST APIs (CoinGecko, ExchangeRate-API)</b></h4>
+        <p>• Developed an interactive financial dashboard that displays real-time cryptocurrency prices, stock indices, and currency exchange rates using public APIs.</p>
+        <p>• Implemented data visualization with Chart.js to show historical price trends and market movements with daily data points.</p>
+      </div>
+    </div>
+
+    <!-- You can add more cards here -->
+
+  </div>
+</div>
+
+    <!-- Web Projects -->
+    
+    <!-- Web Projects -->
+<div class="tab-content" id="web">
+  <div class="project-grid">
+     <!-- Project 3 -->
+    <div class="project-card" data-repo="https://github.com/SuganthiGanesan/Real-time-emotion-object-detection">
+      <img src="images/project6.jpeg" alt="Browser-Based Detection" />
+      <div class="project-info">
+        <h3>Browser-Based Emotion and Object Detection System</h3>
+        <h4>Tech Used: <b> HTML, CSS, JavaScript, TensorFlow.js (COCO-SSD, BlazeFace)                                 </b></h4>
+<p>• Built a browser-based system for live object and face detection with simulated emotion recognition using webcam input.</p>
+        <p>• Delivered responsive interface with live metrics and visualization while maintaining client-side privacy.</p>
+
+        <p>• Achieved 15-20 FPS performance through optimized rendering and efficient frame processing.</p>
+
+      </div>
+    </div>
+
+    <!-- Project 1 -->
+    <div class="project-card" data-repo="https://github.com/SuganthiGanesan/Learnopedia">
+      <img src="images/project5.jpeg" alt="Learnopedia" />
+      <div class="project-info">
+        <h3>Learnopedia</h3>
+        <h4>Tech Used: <b>HTML, CSS, JavaScript</b></h4>
+        <p>• Developed a multi-page educational web platform ("Learnopedia") using HTML, featuring tools like quizzes, translators, vocabulary builders, and general knowledge modules.</p>
+        <p>• Implemented modular and semantic page structures, enabling ease of maintenance, scalability, and consistency across interactive learning interfaces.</p>
+      </div>
+    </div>
+     <div class="project-card" data-repo="https://github.com/SuganthiGanesan/Reciepe-Finder">
+      <img src="images/project8.jpg" alt="Reciepe-Finder" />
+      <div class="project-info">
+        <h3>Reciepe Finder</h3>
+        <h4>Tech Used: <b> Python (Flask), HTML, CSS, JavaScript, Spoonacular API </b></h4>
+<p>• Developed a full-stack web application to search recipes by ingredients and display them in a horizontal, responsive slider layout.</p>
+        <p>•Integrated Spoonacular API to fetch real-time recipe data including images and titles, with clickable cards linking to full recipes.</p>
+
+      </div>
+    </div>
+
+   
+  </div>
+</div>
+
+  </section>
 
   <!-- Skills -->
-  <section id="skills" class="slide-up">
-    <h2>SKILLS</h2>
-    <ul class="skills-list">
-      <li>Artificial Intelligence</li>
-      <li>Machine Learning</li>
-      <li>Data Science</li>
-      <li>Python</li>
-      <li>Java</li>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-    </ul>
-  </section>
+  <section id="skills" class="slide-up skills-section">
+  <h2 class="section-title">SKILLS</h2>
 
+  <div class="skills-row">
+
+    <!-- Domain / Expertise -->
+    <div class="skill-item">
+      <img src="images/ailogo.jpg" alt="AI" class="skill-icon">
+      <p>AI</p>
+    </div>
+
+    <div class="skill-item">
+      <img src="images/mllogo.jpg" alt="ML" class="skill-icon">
+      <p>ML</p>
+    </div>
+
+
+    <div class="skill-item">
+      <img src="images/da1.png" alt="Data Analytics" class="skill-icon">
+      <p>Data Analytics</p>
+    </div>
+
+    <!-- Programming Languages -->
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-icon">
+      <p>Python</p>
+    </div>
+
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="skill-icon">
+      <p>Java</p>
+    </div>
+
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" class="skill-icon">
+      <p>C++</p>
+    </div>
+
+    <!-- Tools & Frameworks -->
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" class="skill-icon">
+      <p>TensorFlow</p>
+    </div>
+
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" class="skill-icon">
+      <p>PyTorch</p>
+    </div>
+
+    <div class="skill-item">
+      <img src="images/scikit.png" alt="Scikit-learn" class="skill-icon">
+      <p>Scikit-learn</p>
+    </div>
+
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" class="skill-icon">
+      <p>Pandas</p>
+    </div>
+
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" class="skill-icon">
+      <p>NumPy</p>
+    </div>
+
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" alt="Matplotlib" class="skill-icon">
+      <p>Matplotlib</p>
+    </div>
+
+    <div class="skill-item">
+      <img src="images/seaborn.png" alt="Seaborn" class="skill-icon">
+      <p>Seaborn</p>
+    </div>
+
+  </div>
+</section>
   <!-- Certifications -->
 
   <section id="certifications" class="timeline slide-up">
@@ -221,6 +348,7 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
