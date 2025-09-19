@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     retina_detect: true
   });
 
-  // Dark Mode: Enable by default and toggle
+  // Dark Mode Toggle & Persistence
   const toggleBtn = document.getElementById("dark-toggle");
   const prefersDark = localStorage.getItem("darkMode");
 
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("darkMode", isDark);
   });
 
-  // Navigation Menu Scroll
+  // Smooth Scroll on Nav Click
   document.querySelectorAll(".nav-link").forEach(link => {
     link.addEventListener("click", e => {
       e.preventDefault();
@@ -103,16 +103,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Project Cards → GitHub Repo
+  // Project Cards Open GitHub Repo
   document.querySelectorAll(".project-card").forEach(card => {
     card.addEventListener("click", (e) => {
       if (e.target.tagName === 'A' || e.target.classList.contains("view-cert-btn")) return;
       const repo = card.getAttribute("data-repo");
-      if (repo) window.open(repo, "_blank");
+      if (repo) window.open(repo.trim(), "_blank");
     });
   });
 
-  // Certificate Viewing
+  // Certificate Viewer
   document.querySelectorAll(".view-cert-btn").forEach(btn => {
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -122,4 +122,31 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  // Tabs for Project Categories
+  const tabButtons = document.querySelectorAll(".tab-btn");
+  const tabContents = document.querySelectorAll(".tab-content");
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const target = btn.getAttribute("data-tab");
+
+      tabButtons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      tabContents.forEach(content => {
+        if (content.id === target) {
+          content.classList.add("active");
+        } else {
+          content.classList.remove("active");
+        }
+      });
+    });
+  });
+
+  // Optional: Show first tab by default
+  if (tabButtons.length && tabContents.length) {
+    tabButtons[0].classList.add("active");
+    tabContents[0].classList.add("active");
+  }
 });
